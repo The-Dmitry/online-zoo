@@ -1,0 +1,252 @@
+.pets {
+    // overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 103px;
+    // margin: 0 auto;
+    // padding-top: 70px;
+    &::after {
+        content: url(/src/images/pets_pets_strelitzia\ 1.svg);
+        position: absolute;
+        bottom: -2px;
+        right: 0;
+    }
+    &::before {
+        content: url(/src/images/pets_palm_foto.svg);
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+    }
+    @media (max-width: 1480px) {
+        padding-bottom: 150px;
+        &::after {
+            content: url(/src/images/small-desktop-strelitzia\ 1.svg);
+            bottom: -4px;
+
+        }
+        &::before {
+            content: url(/src/images/small-desktop-palm_foto.svg);
+            bottom: -4px;
+        }
+    }
+    @media (max-width: $tablet) {
+        padding-bottom: 100px;
+        &::after {
+            content: url(/src/images/tablet-strelitzia\ 1.svg);
+            bottom: -2px;
+
+        }
+        &::before {
+            content: url(/src/images/tablet-palm_foto.svg);
+            bottom: -2px;
+        }
+    }
+    @media (max-width: $mobile) {
+        padding-bottom: 60px;
+        &::after {
+            content: url(/src/images/mobile-strelitzia\ 1.svg);
+            bottom: -6px;
+        }
+        &::before {
+            content: url(/src/images/mobile-palm_foto.svg);
+            bottom: -2px;
+        }
+    }
+}
+
+.pets-container {
+    margin: 0 auto 81px auto;
+    position: relative;
+    max-width: 1160px;
+    width: 100%;
+    @media (max-width: $tablet) {
+        margin: 0 auto 48px auto;
+    }
+    @media (max-width: $mobile) {
+        margin: 0 auto 10px auto;
+    }
+}
+.slider {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    // padding-bottom: 81px;
+    margin: 0 auto;
+    @media (max-width: 1280px) {
+        gap: 90px;
+    }
+    @media (max-width: 584px) {
+        gap: 15px;
+    }
+
+}
+.slider__row {
+    margin: 0 auto;
+    max-width: 1160px;
+    position: relative;
+    animation: 1s ease-in-out;
+}
+
+.slider-container {
+    position: relative;
+    // z-index: 5;
+    top: 0;
+    left: 0;
+    display: flex;
+    animation: 1s ease-in-out;
+    gap: 28px;
+    @media (max-width: 630px) {
+        gap: 20px;
+    }
+    @media (max-width: 584px) {
+        flex-direction: column;
+    }
+}
+
+
+.slider-container div:nth-child(3) {
+    @media (max-width: 840px) {
+        display: none;
+    }
+} 
+
+.row-1 {
+
+}
+
+.row-2 {
+
+}
+.slider__item {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(255, 153, 0);
+    border-radius: 5px;
+}
+
+.slider-animal {
+    position: relative;
+    padding: 0 0 100% 0; 
+}
+
+.slider-text-hover {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.388);
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider-info {
+    padding: 5px 10px 9px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-name{
+    @include font-style($weight: 500, $height: 140%);
+    // @media (max-width: )
+}
+
+.slider-location {
+    @include font-style($size: 1.5rem, $weight: 300, $height: 120%);
+}
+
+.slider-meal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    font-size: 80px;
+    top: 45%;
+}
+
+// .left {
+//     right: 100%;
+// }
+// .right {
+//     left: 100%;
+// }
+
+.slider-controls {
+    display: flex;
+    height: 1px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.next {
+    position: absolute;
+    top: 0;
+}
+
+.to-left {
+    animation-name: left;
+}
+
+.to-right {
+    animation-name: right;
+}
+
+.from-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+
+
+
+@keyframes left {
+    from {
+        left: 0%;
+    }
+    to {
+        left: -150%;
+    }
+}
+@keyframes right {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 150%;
+    }
+}

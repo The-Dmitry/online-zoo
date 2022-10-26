@@ -1,0 +1,73 @@
+.burger-overlay {
+    // display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000069;
+    z-index: 10;
+}
+
+.burger-overlay {
+    
+}
+
+.burger-overlay_open {
+    display: block;
+}
+.burger-menu {
+    position: relative;
+    top: -70%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px 10px 40px 10px;
+    background-color: #fff;
+    transition: all linear 0.3s;
+}
+
+.burger-menu-open {
+    top: 0;
+}
+
+.burger-logo {
+    position: relative;
+    display: inline-block;
+    max-width: 65px;
+    padding: 3px;
+    @include font-style($size: 1.52rem, $height: 120%);
+    text-align: center;
+    color: #FE9013;
+    border: 1px solid #FE9013;
+    border-radius: 2px;
+    &::after {
+        content: url(/src/icons/bamboo-burger.svg);
+        position: absolute;
+        top: 19px;
+        left: 11px;
+    }
+}
+
+.burger-navigation-list {
+    // max-width: 150px;
+    width: fit-content;
+}
+.burger-navigation__item {
+    padding: 7.5px 0;
+}
+.burger-navigation-link {
+    color: #000000;
+    @include font-style();
+}
+
+.close-burger {
+    position: absolute;
+    background: url(/src/icons/x_icon.svg) center no-repeat;
+    padding: 15px;
+    right: 10px;
+    // top: 25px;
+    height: 20px;
+    width: 20px;
+    border: none;
+}

@@ -1,0 +1,245 @@
+.testimonials {
+    overflow: hidden;
+    position: relative;
+    padding: 142px 0 180px 0;
+    & div:first-child {
+        position: relative;
+        overflow: hidden;
+    }
+    &::after {
+        content: url(/src/icons/testimonial-leaf.svg);
+        position: absolute;
+        bottom: -137px;
+        right: -1px;
+    }
+    @media (max-width: $sDesktop) {
+        padding: 100px 30px 140px 30px;
+        &::after {
+            content: url(/src/images/small-desktop-leav_foto.svg);
+            bottom: -87px;
+            right: -1px;
+        }
+    }
+    @media (max-width: $tablet) {
+        padding: 60px 23px 80px 20px;
+        &::after {
+            content: url(/src/images/tablet-leav_foto.svg);
+            bottom: -71px;
+        }
+    }
+    @media (max-width: $mobile) {
+        padding: 28px 13px 60px 10px;
+        &::after {
+            content: url(/src/images/mobile-leav_foto.svg);
+            bottom: -32px;
+        }
+    }
+}
+
+.testimonials-container_position {
+}
+
+.testimonials-container {
+    // overflow: hidden;
+    position: relative;
+    left: 0;
+    display: flex;
+    align-self: flex-start;
+    gap: 28px;
+    // max-width: 1160px;
+    margin-top: 47px;
+    transition: left linear 0.7s;
+    // margin: 27px auto 15px auto;
+    @media (max-width: $sDesktop) {
+        margin-top: 28px;
+    }
+    @media (max-width: $tablet) {
+        position: static;
+        left: 0px;
+        overflow: visible;
+        max-height: 360px;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 39px;
+        margin-top: 31px;
+        & li:nth-child(n+4) {
+            display: none;
+        }
+    }
+    @media (max-width: $mobile) {
+        margin-top: 19px;
+        margin-bottom: 30px;
+    }
+}
+
+.user-wrapper {
+    // flex: 1 1 auto;
+    // width: 100%;
+    width: 268px;
+    display: flex;
+    padding: 1px;
+    background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    border-radius: 20px;
+    @media (max-width: 1100px) {
+        min-width: 293px;
+    }
+    @media (max-width: $tablet) {
+        min-width: none;
+        width: 100%;
+        padding: 2px;
+    }
+}
+
+.user-item {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 15px 20px 15px;
+    background: #F1F3F2;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    border-color: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    @media (max-width: $sDesktop) {
+        padding: 12px 15px 20px 15px;
+    }
+    @media (max-width: $tablet) {
+        padding: 12px 15px 8px 10px;
+    }
+    @media (max-width: $tablet) {
+        padding: 8px 15px 12px 10px;
+    }
+}
+
+.user-info {
+    display: flex;
+    gap: 10px;
+    @media (max-width: $mobile) {
+        gap: 6px;
+    }
+}
+
+.user-photo {
+    height: 37px;
+    width: 37px;
+}
+.user-photo img {
+    height: 37px;
+    width: 37px;
+}
+
+.user-name {
+    @include font-style($height: 120%);
+    color: black;
+}
+
+.furhter-info span{
+    @include font-style($weight: 300, $size: 1.5rem, $height: 120%);
+    color: #BDBDBD;
+}
+
+.furhter-info span:nth-child(2){
+    padding: 0 5px 0 8px;
+}
+
+.user-message {
+    @include font-style($weight: 300, $size: 1.5rem, $height: 120%);
+    color: #767474;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 17;
+    @media (max-width: $tablet) {
+        padding-left: 4px;
+        -webkit-line-clamp: 2;
+    }
+    @media (max-width: $mobile) {
+        padding-left: 6px;
+    }
+}
+
+
+.scroll-bar {
+    cursor: pointer;
+    margin: 22px 0 30px 0;
+    -webkit-appearance: none;
+    width: 599px;
+    height: 6px;
+    background: #e7e7e7;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 5px;
+    border: 1px solid #edb3ff;
+    @media (max-width: $sDesktop) {
+        width: 390px;
+        margin: 22px 0 51px 0;
+    }
+    @media (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.scroll-bar::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20%; /* Set a specific slider handle width */
+    height: 8px; /* Slider handle height */
+    background: #f5510b; /* Green background */
+    border-radius: 5px;
+    cursor: pointer; /* Cursor on hover */
+}
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000069;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: 0;
+    transition: all linear 0.5s;
+}
+
+// .overlay li {
+//     width: 100%;
+// }
+
+.overlay_display {
+    display: flex;
+}
+
+.overlay_visible {
+    opacity: 1;
+}
+
+.overlay-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    padding: 0 20px;
+}
+
+.overlay-container .user-message {
+    -webkit-line-clamp: 20;
+    max-height: 600px;
+}
+.close-modal {
+    align-self: flex-end;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+}

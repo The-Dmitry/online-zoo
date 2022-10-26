@@ -1,0 +1,108 @@
+.favorite {
+    background: url(/src/images/favourite-panda.jpg) center -225px / cover no-repeat;
+    @media (max-width: 1030px) {
+        background: url(/src/images/small-desctop-panda.jpg) center -80px / cover no-repeat;
+    }
+    @media (max-width: $tablet) {
+        background: url(/src/images/small-desctop-panda.jpg) center -35px / cover no-repeat;
+        padding: 48px 11px 40px 20px;
+        margin-top: 34px;
+    }
+    @media (max-width: 325px) {
+        background: url(/src/images/mobile-Panda.jpg) 0 0 / 100% auto no-repeat;
+        padding: 40px 9px 0 11px;
+    }
+}
+
+.favorite__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 0 0 auto;
+    padding: 85px 0 100px 0;
+    @media (max-width: $sDesktop) {
+        padding: 43px 0 47px 0;
+    }
+    @media (max-width: $tablet) {
+        padding: 0;
+    }
+}
+
+.favorite__text {
+    position: relative;
+    padding-bottom: 62px;
+    z-index: 2;
+    @include font-style($height: 75%, $size: 10.66rem, $weight: 700);
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -73px;
+        left: -73px;
+        height: 465px;
+        width: 465px;
+        background: $orange-gradient;
+        border-radius: 50%;
+    }
+    @media (max-width: $sDesktop) {
+        @include font-style($height: 75%, $size: 8.5rem, $weight: 700);
+        &::after {
+            height: 367px;
+            width: 367px; 
+            top: -54px;
+            left: -44px;
+        }
+        padding:0 71px 40px 0;
+    }
+    @media (max-width: $tablet) {
+        @include font-style($height: 75%, $size: 5.43rem, $weight: 700);
+        max-width: 265px;
+        padding:0;
+        &::after {
+            height: 237px;
+            width: 237px; 
+            top: -38px;
+            left: -33px;
+        }
+    }
+    @media (max-width: $mobile) {
+        @include font-style($height: 75%, $size: 2.8rem, $weight: 700);
+        max-width: 130px;
+        &::after {
+            height: 119px;
+            width: 119px;
+            top: -19px;
+            left: -18px;
+        }
+    }
+}
+
+.colored-text {
+    color: $yellow-text-color;
+}
+
+.button {
+}
+
+.favorite_button {
+    align-self: center;
+    padding-left: 10px;
+    @media (max-width: $sDesktop) {
+        // align-self: flex-end;
+        margin-left: -75px;
+    }
+    @media (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.favorite_button-mobile {
+    display: none;
+    align-self: flex-start;
+    @media (max-width: $tablet) {
+        display: block;
+    }
+}

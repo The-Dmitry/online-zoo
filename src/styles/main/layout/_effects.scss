@@ -1,0 +1,19 @@
+.navigation__item:nth-child(1){
+    pointer-events: none;
+    background: $orange-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-nav li:nth-child(1){
+    pointer-events: none;
+    background: $orange-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navigation-link:active,
+.footer-nav-item__link:active,
+.design:active {
+    color: #F9804B;
+}

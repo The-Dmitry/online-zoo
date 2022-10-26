@@ -1,0 +1,138 @@
+.backstage {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 178px;
+    &::after {
+        content: url(/src/images/backstage-side-flower.svg);
+        position: absolute;
+        top: 12px;
+        right: 0;
+    }
+    @media (max-width: 1508px){
+        &::after {
+            right: -80px;
+        }
+    };
+    @media (max-width: 1350px){
+        &::after {
+            right: -120px;
+        }
+    };
+    @media (max-width: $sDesktop) {
+        padding: 0 30px 146px 30px;
+        &::after {
+        display: none;
+        }
+    };
+    @media (max-width: $tablet) {
+        padding: 0 20px 78px 21px;
+        &::after {
+        content: url(/src/images/tablet-flower_foto1.svg);
+        display: block;
+        right: 0;
+        top: -6px;
+        }
+    };
+    @media (max-width: $mobile) {
+        padding: 0 10px 40px 10px;
+        overflow: visible;
+        &::after {
+        content: url(/src/images/mobile-flower_foto1.svg);
+        display: block;
+        right: 0;
+        top: -36px;
+        
+        }
+    };
+}
+
+.explanation {
+    display: flex;
+    gap: 86px;
+    margin-top: 139px;
+    color: $blue-text-color;
+    @media (max-width: $sDesktop) {
+        margin: 100px 0 0 0;
+        gap: 31px;
+    }
+    @media (max-width: $tablet) {
+        margin: 49px 0 0 0;
+        gap: 31px;
+    }
+    @media (max-width: $mobile) {
+        margin: 21px 0 0 0;
+        gap: 31px;
+    }
+}
+
+.explanation__image {
+    flex: 1 1 60%;
+    max-width: 609px;
+    max-height: 403px;
+    background: url(/src/images/backstage-bamboo-cap.jpg) 0 0/cover no-repeat;
+    @media (max-width: $sDesktop) {
+        max-width: 455px;
+        max-height: 408px;
+        margin-top: 10px;
+        background-position: -80px 0;
+    }
+    @media (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.explanation__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 40%;
+    & h2:nth-child(1) {
+        margin-bottom: 20px;
+    }
+    & p:nth-child(2) {
+        margin-bottom: 55px;
+    }
+    & h3:nth-child(3) {
+        margin-bottom: 33px;
+    }
+    @media (max-width: $tablet) {
+        // max-width: 495px;
+        // align-self: flex-start;
+        padding-right: 115px;
+        & p:nth-child(2) {
+            margin-bottom: 33px;
+        }
+        & h3:nth-child(3) {
+            margin-left: 3px;
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width: $mobile) {
+        padding-right: 10px;
+        flex: 1 1 90%;
+        & h2:nth-child(1) {
+            margin-bottom: 10px;
+        }
+        & p:nth-child(2) {
+            margin-bottom: 21px;
+            margin-left: 2px;
+        }
+        & h3:nth-child(3) {
+            margin-bottom: 9px;
+        }
+    }
+}
+
+
+.explanation-text {
+    @include font-style($height: 130%);
+}
+
+.explanation__content p:last-of-type {
+    @include font-style($height: 137%);
+
+}
+.explanation__subtitle {
+    @include font-style($size: 2.4rem, $height: 120%);
+}
+
+
