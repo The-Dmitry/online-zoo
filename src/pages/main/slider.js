@@ -195,13 +195,8 @@ function closeTestimonial() {
     body.classList.remove('fixed-body')
 }
 
-// console.log(body);
 
 function testimonialSize() {
     body.offsetWidth < 1170 ? scroll.setAttribute('max', 8) : scroll.setAttribute('max', 7)
-    // explanation.offsetWidth === 1100 ? scroll.setAttribute('value', 0) : scroll.setAttribute('value', 0)\
     console.log(body.offsetWidth);
 }
-
-
-alert('В процессе выполнения работы, я увлёкся заменой svg, из-за чего возможны подтормаживания на брейкпоинтах.\n Времени на исправление нет - понять и простить) \n В случае аварийной ситуации стучать в дискорд Dman#6894 \n Удачи)')
